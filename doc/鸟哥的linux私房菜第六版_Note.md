@@ -36,6 +36,8 @@ Linux 预设的情况下会提供六个Terminal 来让使用者登入, 切换的
 
 ### 重要的几个热键[Tab], [ctrl]-c, [ctrl]-d
 
+#### [Tab]
+
 在各种 Unix-Like 的 Shell 当中,这个[Tab]按键算是 Linux 的 Bash shell 最棒的功能之一了!
 
 总结一下:
@@ -46,4 +48,19 @@ Linux 预设的情况下会提供六个Terminal 来让使用者登入, 切换的
 - 若安装 bash-completion 软件,则在某些指令后面使用 [tab] 按键时,可以进行『选项/参数的补齐』功能!
 
 善用 [tab] 按键真的是个很好的习惯!可以让你避免掉很多输入错误的机会!
+
+#### [ctrl]-c
+
+[Ctrl]与 c 按键(先按着[Ctrl]不放,且再按下 c 按键,是组合按键), 那就是中断目前程序的按键啦
+
+#### [Ctrl]-d 按键
+
+『键盘输入结束(End Of File, EOF 或 End Of Input)』的意思
+
+你想要直接离开文字接口,可以直接按下[Ctrl]-d 就能够直接离开了(相当于输入 exit 啊!)
+
+#### [shift]+{[PageUP]|[Page Down]}按键
+
+你可以使用[Shift]+[Page Up] 来往前翻页,也能够使用 [Shift]+[Page Down] 来往后翻页
+
 
