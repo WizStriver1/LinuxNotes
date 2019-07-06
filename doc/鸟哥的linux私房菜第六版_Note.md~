@@ -92,18 +92,3 @@ info 和 man 功能类似，info 会将信息分页显示
 ### 正确的关机指令使用
 
 例如 shutdown 与 reboot 两个指令!
-
-#### 惯用的关机指令: shutdown
-由于 Linux 的关机是那么重要的工作,因此除了你是在主机前面以实体终端机 (tty1~tty7) 来登入系
-统时, 不论用什么身份都能够关机之外,若你是使用远程管理工具(如透过 pietty 使用 ssh 服务来从
-其他计算机登入主机), 那关机就只有 root 有权力而已喔!
-
-关机之前可以给所有用户发送信息,比如：
-
-/sbin/shutdown -h 10 'I will shutdown after 10 mins'
-
-可以通过
-
-/sbin/shutdown -c
-
-来取消定时关机
