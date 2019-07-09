@@ -107,3 +107,45 @@ info 和 man 功能类似，info 会将信息分页显示
 /sbin/shutdown -c
 
 来取消定时关机
+
+# Linux 的文件权限与目录配置
+
+## 文件权限概念
+
+### 如何改变文件属性与权限
+
+几个常用于群组、拥有者、各种身份的权限之修改的指令
+
+- chgrp :改变文件所属群组
+- chown :改变文件拥有者
+- chmod :改变文件的权限, SUID, SGID, SBIT 等等的特性
+
+系统记录用户信息的文件
+- /etc/group 记录群组
+- /etc/passwd 记录用户
+
+#### 数字类型改变文件权限
+Linux 文件的基本权限就有九个,分别是 owner/group/others 三种身份各有自己的 read/write/execute(读/写/执行) 权限,这九个权限是三个三个一组的!
+
+各权限的分数对照表如下:
+- r:4
+- w:2
+- x:1
+- -:0
+
+每种身份(owner/group/others)各自的三个权限(r/w/x)分数是需要累加的,例如当权限为: [-rwxrwx---] 分数
+则是:
+- owner = rwx = 4+2+1 = 7
+- group = rwx = 4+2+1 = 7
+- others= --- = 0+0+0 = 0
+所以等一下我们设定权限的变更时,该文件的权限数字就是 770 啦!
+
+#### 符号类型改变文件权限
+藉由 u, g, o 来代表三种身份的权限!此外, a 则代表 all 亦即全部
+的身份
+
+chmod [u, g, o, a] [+(加入), -(出去), =(设定)] [r, w, x] [Dir, File]
+
+chmod [u, g, o, a][+(加入), -(出去), =(设定)][rwx][,[...]] [Dir, File]
+比如，设置一个文件的权限为[-rwxr-xr-x]：
+chmod u=rwx,go=rx filename
