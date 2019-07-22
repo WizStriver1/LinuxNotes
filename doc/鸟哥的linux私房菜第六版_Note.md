@@ -144,8 +144,14 @@ Linux 文件的基本权限就有九个,分别是 owner/group/others 三种身�
 藉由 u, g, o 来代表三种身份的权限!此外, a 则代表 all 亦即全部
 的身份
 
-chmod [u, g, o, a] [+(加入), -(出去), =(设定)] [r, w, x] [Dir, File]
-
 chmod [u, g, o, a][+(加入), -(出去), =(设定)][rwx][,[...]] [Dir, File]
 比如，设置一个文件的权限为[-rwxr-xr-x]：
 chmod u=rwx,go=rx filename
+
+## Linux目录配置
+### FHS
+			可分享的（shareable)	不可分享的（unshareable）
+不变的（static)		/usr(软件放置处)		/etc（配置文件）
+			/opt（第三方协力软件）	/boot（开机与核心档）
+可变的(variable)		/var/mail（使用者邮件信箱）/var/run（程序相关）
+			/var/spool/news（新闻组） /var/lock（程序相关）
