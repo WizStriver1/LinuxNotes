@@ -149,7 +149,11 @@ chmod [u, g, o, a][+(加入), -(出去), =(设定)][rwx][,[...]] [Dir, File]
 chmod u=rwx,go=rx filename
 
 ## Linux目录配置
-### FHS
+### Linux 目录配置的依据--FHS
+
+FHS 依据文件系统使用的频繁与否与是否允
+许使用者随意更动, 而将目录定义成为四种交互作用的形态,用表格来说有点像底下这样：
+
 			可分享的（shareable)	不可分享的（unshareable）
 不变的（static)		/usr(软件放置处)		/etc（配置文件）
 			/opt（第三方协力软件）	/boot（开机与核心档）
